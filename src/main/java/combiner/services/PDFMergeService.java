@@ -22,10 +22,6 @@ public class PDFMergeService {
 
         pdfMerger.setDestinationFileName(mergedFile.getAbsolutePath());
         Path tempPdfToMerge = Files.createTempDirectory("tempPdfToMerge");
-        // read files to merge
-//        File allFiles = new File("pdfToMerge");
-//        FilenameFilter pdfFilter = (dir, name) -> name.endsWith(".pdf");
-//        File[] pdfToMerge = allFiles.listFiles(pdfFilter);
 
         for (MultipartFile file : files) {
             if (!file.isEmpty() && file.getOriginalFilename().endsWith(".pdf")) {

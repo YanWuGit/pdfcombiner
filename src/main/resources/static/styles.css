@@ -1,0 +1,73 @@
+html, body {
+    background-color: darkgray;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    margin: 0;
+}
+
+.form__pdf-upload {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 0.7rem;
+}
+
+
+.pdf-form__input {
+    font-size: larger;
+
+    margin-bottom: 2rem;
+
+    grid-column: span 12;
+    justify-self: center;
+}
+
+.file-list__title {
+    grid-column: span 6;
+    justify-self: end;
+}
+
+.file-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    font-size: large;
+    font-weight: bold;
+
+    grid-column: span 6;
+}
+
+.pdf-form__error__no-pdf {
+    grid-column: span 12;
+    justify-self: center;
+
+    font-size: large;
+    color: red;
+}
+
+.pdf-form__submit {
+    grid-column: span 12;
+    margin: 0 auto;
+    padding: 0;
+    
+    height: 2rem;
+    width: 12rem;
+
+    font-weight: bold;
+    font-size:large;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
