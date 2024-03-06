@@ -13,7 +13,7 @@
 
 
         console.log(pdfInput.files.length);
-        if (!pdfInput.files.length) {
+        if (pdfInput.files.length<2) {
             e.preventDefault();
         }
     });

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Combiner</title>
+    <link rel="stylesheet" href="pdf-combine.css" />
+    <script defer src="pdf-combine.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/index.html" class="header__home-link home-link">
+        <img
+          src="/static/home-icon.webp"
+          alt="home icon"
+          class="home-link__img"
+        />
+      </a>
+      <h1 class="header__header">PDF Combiner</h1>
+    </header>
+    <main>
+      <h2>Upload Multiple PDF Files</h2>
+      <form
+        class="form__pdf-upload pdf-form"
+        id="pdf-upload-form"
+        action="/mergepdf"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <input
+          class="pdf-form__input"
+          type="file"
+          id="pdf-files"
+          name="files"
+          accept="application/pdf"
+          multiple
+        />
+        <h3 class="file-list__title">Selected Files:</h3>
+        <ul id="file-list" class="file-list">
+          <li>No files selected.</li>
+        </ul>
+        <span class="pdf-form__error__no-pdf"></span>
+
+        <button class="pdf-form__submit" type="submit">Upload & Merge</button>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>
